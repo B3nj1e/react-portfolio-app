@@ -17,7 +17,7 @@ const styles = {
 
 // We use JSX curly braces to evaluate the style object on the JSX tag
 
-function Navbar() {
+function Footer() {
   return (
     <nav style={styles.navbarStyle} className="navbar">
       <a href="/">Welcome</a>
@@ -25,4 +25,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Footer;

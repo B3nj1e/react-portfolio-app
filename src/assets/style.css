@@ -1,0 +1,314 @@
+/* establishing custom variables */
+:root {
+    --dark: rgb(50, 50, 56);
+    --dark-purle: rgb(53, 0, 53);
+    --blue: rgb(0, 162, 255);
+}
+
+/* setting styles for entire website */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* setting formating for body content */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 235, 235);
+}
+
+/* styling header and establishing properties for navbar and website heading */
+header {
+    display: flex;
+    justify-content: space-between;
+    /* big struggle with setting up header, must do "justify content space between" to separate title to left
+    and nav buttons to right (this only works for 2 children in parent container) */
+    /* if 3 or more children in parent container (header), set header to "justify content flex end" to push 
+    everything to the far right, then set margin "right: 0"on child item that you want on the left  */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+/* setting navbar flex properties */
+.navbar {
+    display: flex;
+}
+
+/* formating for nav button size/colors etc */
+.nav-button {
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+/* page title formating */
+.page-title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px 15px 30px;
+    margin-left: 25px;
+}
+
+/* setting transition effects */
+.nav-button {
+    transition: all 0.3s ease 0s;
+}
+
+/* setting text color to blue on cursor hover */
+.nav-button:hover {
+    color: var(--blue);
+}
+
+/* defining parent container flex properties to align child/item text centrally, inserting background image */
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    line-height: 1.5;
+    color:rgb(151, 0, 0);
+    background-image: url(./images/congruent_pentagon.png);
+    height: 250px;
+}
+
+/* defining about me parent container flex properties and spacing */
+#about-me {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 7% 0;
+}
+
+#about-me h2 {
+    margin: 0 6%;
+}
+
+/* formating profile picture */
+#about-me img {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 50%;
+    margin: 0 3%;
+}
+
+/* defining parent container properties for display of work cards */
+.my-work {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#my-work h2 {
+    margin: 0 40px;
+    text-align: center;
+}
+
+/* defining flex properties within work card */
+.my-work-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3%;
+}
+
+.my-work-card p {
+    margin: 2%;
+}
+
+/* setting work card img width */
+.my-work-card img {
+    width: 96%;
+    height: auto;
+}
+
+/* making first work card larger than the rest */
+.my-work-card:first-child {
+    width: 80%;
+}
+
+/* making work cards that arent the first, smaller */
+.my-work-card:not(:first-child) {
+    max-width: 44%;
+    max-height: 60%;
+}
+
+/* setting opacity of project pics */
+.my-work img {
+    object-fit: cover;
+    opacity: 0.6;
+}
+/* transition properties for project images */
+.my-work img {
+    transition: all 0.3s ease 0s;
+}
+
+/* styling transition changes to project images when cursor hovers  */
+.my-work img:hover {
+    border-style: solid;
+    border-color: var(--blue);
+    border-width: 5px;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+/* defining contact me parent container flex properties */
+#contact-me {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    background-image: url(./images/congruent_pentagon.png);
+}
+
+#contact-me h2 {
+    margin: 20px;
+}
+
+/* setting contact form */
+.contact-form {
+    max-width: 400px;
+  }
+  
+form p {
+    margin: 3% 0;
+  }
+  
+label {
+    display: block;
+  }
+  
+  button {
+    padding: 2% 3%;
+    color: white;
+    background-color: #960000;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .text-input {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  .text-input, select {
+    padding: 1%;
+    outline: none;
+    border: 1.2px solid #b9C6ae;
+  }
+  
+  .text-input:hover, .checkbox:hover, 
+  select:hover, button:hover {
+    box-shadow: 0 0 5px #999;
+  }
+  
+  /* The right-side border changes when the element is clicked on or tabbed into */
+  .text-input:focus {
+    border-right-width: 5px;
+  }
+  
+  /* The border becomes dashed when the element's placeholder text is visible */
+  .text-input:placeholder-shown {
+    border-style: dashed;
+  }
+  
+  .flex-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .flex-row select {
+    flex: 1 0 0;
+    margin-left: 2%;
+  }
+  
+  .flex-row input {
+    margin-right: 2%;
+  }
+
+footer {
+    background-color: var(--dark);
+    width: auto;
+}
+
+footer p {
+    text-align: center;
+    font-weight: 400;
+    color: white;
+    margin: 40px;
+}
+
+
+/* when screen size 786px and less, the following styling is applied*/
+@media screen and (max-width: 786px) {
+    /* header and footer formating to purple and column display*/
+    header {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--dark-purle);
+    }
+
+    footer {
+        background-color: var(--dark-purle);
+    }
+    /* removing left margin on title, centering page title */
+    .page-title {
+        margin-left: 0;
+    }
+    /* navbar changed to column */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    /* nav button made smaller */
+    .nav-button {
+        padding:15px
+    }
+    /* changing about me from row to column flexbox display */
+    #about-me {
+        flex-direction: column;
+        padding: 0;
+        margin: 20px
+    }
+    /* centering and spacing about me title */
+    #about-me h2 {
+        text-align: center;
+        margin: 20px;
+    }
+    /* positiong profile pic */
+    #about-me img {
+        margin-top: 5%;
+        margin-left: 33%;
+        margin-right: 33%;
+        margin-bottom: 5%;
+    }
+    /* bringing contact me p away from media screen edge */
+    #contact-me p{
+        margin: 20px;
+    }
+    /* ensuring work cards that arent the first, stay smaller */
+    .my-work-card:not(:first-child) {
+        max-width: 90%;
+    }
+
+    .my-work-card:first-child {
+        width: 90%;
+    }
+}
