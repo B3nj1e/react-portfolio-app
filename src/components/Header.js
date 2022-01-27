@@ -16,8 +16,9 @@ function Header() {
 
     <div className="navbar">
         <a href="#about-me" class="nav-button">About</a>
-        <a href="#my-work" class="nav-button">Work</a>
+        <a href="#my-work" class="nav-button">Portfolio</a>
         <a href="#contact-me" class="nav-button">Contact</a>
+        <a href="#resume" class="nav-button">Resume</a>
     </div>
 </header>
   );

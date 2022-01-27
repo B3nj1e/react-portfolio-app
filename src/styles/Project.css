@@ -186,8 +186,14 @@ select:hover, button:hover {
   margin-right: 2%;
 }
 
+#resume {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 4%;
+  line-height: 2em;
 
-
+}
 
 /* when screen size 786px and less, the following styling is applied*/
 @media screen and (max-width: 786px) {

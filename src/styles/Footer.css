@@ -15,13 +15,14 @@
 
 footer {
     width: auto;
+    margin: 40px;
 }
 
 footer p {
     text-align: center;
     font-weight: 400;
     color: var(--dark);;
-    margin: 40px;
+    
 }
 
 /* when screen size 786px and less, the following styling is applied*/
@@ -29,4 +30,13 @@ footer p {
     footer {
         background-color: var(--dark-purle);
     }
+}
+
+.img {
+    width: 3%;
+    margin: 1%;
+}
+
+#icons {
+    text-align: center;
 }

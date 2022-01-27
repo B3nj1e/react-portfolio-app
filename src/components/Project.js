@@ -29,7 +29,7 @@ function Section() {
 
 
         <div id="my-work">
-            <h2>My Work</h2>
+            <h2>Portfolio</h2>
         </div>
         <section className="my-work">
             
@@ -96,6 +96,13 @@ function Section() {
             </form>
         
         </div>
+
+        <div id="resume">
+            <h2>Resume</h2>
+            <p><b>Education:</b> Adelaide University Coding Bootcamp August 2021 - Feburary 2022<br></br>
+            <b>Proficiencies:</b> HTML, CSS, JavaScript, Node.js, Express.js, SQL, MySQL, Sequelize, React, MongoDB</p>
+        </div>
+
     </section>
   );
 }
