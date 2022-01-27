@@ -1,12 +1,89 @@
-.navbar {
-  background: #6a1b9a;
-  height: 60px;
+/* establishing custom variables */
+:root {
+  --dark: rgb(50, 50, 56);
+  --dark-purle: rgb(53, 0, 53);
+  --blue: rgb(0, 162, 255);
 }
 
-.navbar a {
-  color: white;
-  font-size: 1.3rem;
+/* setting styles for entire website */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* styling header and establishing properties for navbar and website heading */
+header {
+  display: flex;
+  justify-content: space-between;
+  /* big struggle with setting up header, must do "justify content space between" to separate title to left
+  and nav buttons to right (this only works for 2 children in parent container) */
+  /* if 3 or more children in parent container (header), set header to "justify content flex end" to push 
+  everything to the far right, then set margin "right: 0"on child item that you want on the left  */
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--dark);
+}
+
+/* setting navbar flex properties */
+.navbar {
+  display: flex;
+}
+
+/* formating for nav button size/colors etc */
+.nav-button {
+  padding: 40px;
+  font-size: 20px;
+  font-weight: 500;
   text-decoration: none;
-  margin: 5px;
-  line-height: 3;
+  color: white;
+}
+
+/* page title formating */
+.page-title {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px 15px 30px;
+  margin-left: 25px;
+}
+
+/* setting transition effects */
+.nav-button {
+  transition: all 0.3s ease 0s;
+}
+
+/* setting text color to blue on cursor hover */
+.nav-button:hover {
+  color: var(--blue);
+}
+
+
+@media screen and (max-width: 786px) {
+  /* header and footer formating to purple and column display*/
+  header {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--dark-purle);
+  }
+
+  /* removing left margin on title, centering page title */
+  .page-title {
+      margin-left: 0;
+  }
+  /* navbar changed to column */
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+  }
+  /* nav button made smaller */
+  .nav-button {
+      padding:15px
+  }
+
 }
