@@ -65,7 +65,7 @@ Designed to introduce myself to prospective employees, by detailing about me, po
 If you think you can improve this application, please feel free to make contributions. I will review these changes on GitHub prior to merging them to the main branch.
 
 ## Test
-To quickly test the application, follow the installation instructions above and run on localhost or navigate to the deployed application on [heroku](https://text-editorjate.herokuapp.com/). Open the inspect function on your browser and check the following...
+To quickly test the application, follow the installation instructions above and run on localhost or navigate to the deployed application on [heroku](https://react-portfolio-demo.herokuapp.com/). Open the inspect function on your browser and check the following...
 
 Below: Default appearance of application; name, header, navbar and about me section. 
 
